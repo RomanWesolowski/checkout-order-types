@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WebIt_Types::types"
+             title="WebIt Order Types"
+             translate="title"
+             module="WebIt_Types"
+             parent="Magento_Backend::content"
+             sortOrder="30"
+             dependsOnModule="WebIt_Types"
+             resource="WebIt_Types::types"/>
+        <add id="WebIt_Types::types_grid"
+             title="Grid"
+             translate="title"
+             module="WebIt_Types"
+             parent="WebIt_Types::types"
+             sortOrder="30"
+             dependsOnModule="WebIt_Types"
+             action="webit_types"
+             resource="WebIt_Types::types"/>
+    </menu>
+</config>

@@ -1,0 +1,24 @@
+<?php
+
+$orderType = $block->getOrderTypeName();
+?>
+<?php if ($orderType) : ?>
+    <section class="admin__page-section order-additional-information">
+        <div class="admin__page-section-title">
+            <strong class="title"><?= __('Additional Information') ?></strong>
+        </div>
+        <div id="<?= $block->getHtmlId() ?>"
+             class="admin__page-section-content order-additional-information-container">
+            <div class="admin__page-section-item order-information">
+                <div class="admin__page-section-item-content">
+                    <table class="admin__table-secondary order-information-table">
+                        <tr>
+                            <th>WebIt Order Type</th>
+                            <td><?= $orderType ?></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>

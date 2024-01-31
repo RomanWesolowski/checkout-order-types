@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"      xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="quote_address" resource="default" engine="innodb">
+        <column xsi:type="text" name="order_type" nullable="true" comment="Order Types"/>
+    </table>
+    <table name="sales_order_address" resource="default" engine="innodb">
+        <column xsi:type="text" name="order_type" nullable="true" comment="Order Types"/>
+    </table>
+
+    <table name="webit_types" resource="default" engine="innodb" comment="WebIt order types table">
+        <column xsi:type="bigint" name="id" nullable="false" comment="Product ID" unsigned="true" identity="true" />
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Product sku"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
